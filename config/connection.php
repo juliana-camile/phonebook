@@ -10,7 +10,7 @@ try{
     $conn = new PDO("mysql:host=$host;=$dbname",$user, $pass);
 
     // ativar modo de erros 
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERMODE_EXCEPTION);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch(PDOException $e){
     //erro na conexão 
 $error =$e->getmensage();
