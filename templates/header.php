@@ -1,6 +1,12 @@
 <?php
     include_once("config/url.php");
-    include_once("config/connection.php");
+    include_once("config/process.php");
+
+    // limpa a mensagem
+    if(isset($SESSION['msg'])) {
+        $printMsg = $SESSION['msg'];
+        $_SESSION['msg'] = '';
+    }
 ?>
 
 <!DOCTYPE html>
