@@ -17,3 +17,5 @@ $conn->setAttribute(PDO::ATTR_ERRMODE, PDO:ERRMODE_EXCEPTION);
     $erro = $e->getMessage();
     echo "Erro: $error"; 
 }
+
+?> 
