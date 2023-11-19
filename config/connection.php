@@ -6,16 +6,14 @@ $user = "root";
 $pass = "";
 
 try{
-    $conn = new PDO("mysql:host=$host:dbname=$dbname", $User, $pass);
 
-// ativar o modo de erro 
+    $conn = new PDO("mysql:host=$host;=$dbname",$user, $pass);
 
-$conn->setAttribute(PDO::ATTR_ERRMODE, PDO:ERRMODE_EXCEPTION);
-
+    // ativar modo de erros 
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERMODE_EXCEPTION);
 } catch(PDOException $e){
-    // erro na conexão 
-    $erro = $e->getMessage();
-    echo "Erro: $error"; 
+    //erro na conexão 
+$error =$e->getmensage();
+   echo "Erro: $error";
 }
-
 ?> 
