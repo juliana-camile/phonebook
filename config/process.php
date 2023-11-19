@@ -1,5 +1,7 @@
 <?php
 
+
+
 session_start();
 
 include_once("connection.php");
@@ -9,7 +11,7 @@ $query = "SELECT * FROM contacts";
 
 $stmt = $conn->prepare($query);
 
-$stmt-> execute();
+$stmt->xecute();
 
 $contacts = $stmt->fetchALL();
 
